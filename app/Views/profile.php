@@ -7,8 +7,6 @@
     <title>Document</title>
 </head>
 <body>
-<!-- <img src="foto_formal_sintaaa.jpeg" style="width:500px;height:400px; border-radius: 50%;"  -->
-
     <center>
     </center>
 
@@ -16,7 +14,7 @@
       <div class="container">
       <img src ="
     <?php
-        echo base_url('./img/foto_formal_sintaaa.jpeg') ;
+        echo base_url('./img/ijah.jpg') ;
     ?>">
       <div class="item" >
             <?= $nama?>
