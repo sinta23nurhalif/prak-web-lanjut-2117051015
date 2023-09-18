@@ -22,10 +22,10 @@
             <?= $nama?>
 </div>
 <div class="item">
-            <?= $kelas?>
+            <?= $npm?>
 </div>
 <div class="item">
-            <?= $npm?>
+            <?= $kelas?>
 </div>
 
 </div>
