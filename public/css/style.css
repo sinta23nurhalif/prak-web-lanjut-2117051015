@@ -4,7 +4,7 @@
 
 body{
 
-    background-color: #08ffff;
+    background-color: #e6ff08;
 
 }
 .container{
@@ -16,7 +16,7 @@ body{
     flex-direction: column;
 }
 .item{
-    background-color: rgb(79, 107, 200);
+    background-color: gray;
     margin: 2vh;
     padding: 10px;
     width :20vw;

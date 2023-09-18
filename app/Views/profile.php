@@ -7,6 +7,8 @@
     <title>Document</title>
 </head>
 <body>
+<!-- <img src="foto_formal_sintaaa.jpeg" style="width:500px;height:400px; border-radius: 50%;"  -->
+
     <center>
     </center>
 
@@ -14,16 +16,16 @@
       <div class="container">
       <img src ="
     <?php
-        echo base_url('./img/ijah.jpg') ;
+        echo base_url('./img/foto_formal_sintaaa.jpeg') ;
     ?>">
       <div class="item" >
             <?= $nama?>
 </div>
 <div class="item">
-            <?= $kelas?>
+            <?= $npm?>
 </div>
 <div class="item">
-            <?= $npm?>
+            <?= $kelas?>
 </div>
 
 </div>
