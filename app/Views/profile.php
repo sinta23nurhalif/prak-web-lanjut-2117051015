@@ -16,7 +16,7 @@
       <div class="container">
       <img src ="
     <?php
-        echo base_url('./img/foto_formal_sintaaa.jpeg') ;
+        echo base_url('./img/ijah.jpeg') ;
     ?>">
       <div class="item" >
             <?= $nama?>
