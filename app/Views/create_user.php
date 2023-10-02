@@ -1,12 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="<?php echo base_url('./css/style.css'); ?>">
-    <title>Create User</title>
-</head>
-<body>
+<?= $this->extend('layouts/app') ?>
+
+<?= $this->section('content') ?>
+
+<div>
     <center>
     <?php $validation = \Config\Services::validation();?>
 
@@ -44,5 +40,5 @@
 
     
     </center>
-</body>
-</html>
+</div>
+<?= $this->endSection() ?>
