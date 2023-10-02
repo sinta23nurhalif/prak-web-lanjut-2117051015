@@ -3,8 +3,18 @@
 @import url('https://fonts.googleapis.com/css?family=Plus+Jakarta+Sans');
 
 body{
+    
 
-    background-color: #c3f818;
+            /* Membuat gradasi linear vertikal */
+            background: linear-gradient(to bottom, #ff00ee, #0800ff);
+            /* Atur warna teks agar terlihat dengan baik di atas gradasi */
+            color: #ffffff;
+            /* Mengatur ukuran margin dan padding */
+            margin: 0;
+            padding: 0;
+            /* Mengatur tinggi elemen body agar sesuai dengan tinggi tampilan browser */
+            height: 100vh;
+    /* background-color: #a866ff; */
 
 }
 .container{
@@ -16,7 +26,7 @@ body{
     flex-direction: column;
 }
 .item{
-    background-color: rgb(48, 236, 253);
+    background-color: rgb(146, 255, 164);
     margin: 2vh;
     padding: 10px;
     width :20vw;

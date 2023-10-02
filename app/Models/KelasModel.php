@@ -38,4 +38,7 @@ class KelasModel extends Model
     protected $afterFind      = [];
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
+    public function getkelas(){
+        return $this->findAll();
+    }
 }
