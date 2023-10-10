@@ -9,6 +9,7 @@ use App\Models\UserModel;
 class UserController extends BaseController
 {
     protected $helpers = ['Form'];
+    protected $allowedFields =['nama', 'id_kelas', 'npm', 'foto'];
 
     public $userModel;
     public $kelasModel;
@@ -19,6 +20,15 @@ class UserController extends BaseController
         $this->kelasModel = new KelasModel();
     }
 
+    public function show($id){
+        $user = $this->userModel->getUser($id);
+
+        $data = [
+            'title' => 'profile',
+            'user'  => $user,
+        ];
+        return view('profile', $data);
+    }
     public function index()
     {
         $data = [
@@ -50,6 +60,7 @@ class UserController extends BaseController
 
     public function store()
     {
+
         //validasi input
         if (
             !$this->validate([
@@ -72,11 +83,21 @@ class UserController extends BaseController
             return redirect()->back()->withInput();
         }
 
+        $path = 'assets/uploads/img/';
+
+        $foto = $this->request->getFile('foto');
+
+        $name = $foto->getRandomName();
+
+        if ($foto->move($path, $name)) {
+            $foto = base_url($path . $name);
+        }
 
         $this->userModel->saveUser([
-            'nama' => $this->request->getVar('nama'),
+            'nama'     => $this->request->getVar('nama'),
             'id_kelas' => $this->request->getVar('kelas'),
-            'npm' => $this->request->getVar('npm'),
+            'npm'      => $this->request->getVar('npm'),
+            'foto'     => $foto
         ]);
 
         $data = [

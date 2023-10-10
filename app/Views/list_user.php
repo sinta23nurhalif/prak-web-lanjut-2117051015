@@ -2,6 +2,12 @@
 
 <?= $this->section('content') ?>
 
+<nav class="navbar bg-light">
+    <!-- Navbar -->
+    <div class="container-fluid">
+        <a class="navbar-brand" href="<?php echo base_url('user/create'); ?>">Tambah Data</a>
+    </div>
+</nav>
 
 <div class="container">
     <figure>
@@ -28,6 +34,9 @@
                         <td class="col justify-content-center text-center"><?= $user['npm'] ?></td>
                         <td class="col justify-content-center text-center"><?= $user['nama_kelas'] ?></td>
                         <td class="col justify-content-center text-center">
+                            
+                        <td>
+                            <a href="<?= base_url('user/' . $user['id']) ?>">Detail</a>
                             <button type="button" class="btn btn-warning">Edit</button>
                             <button type="button" class="btn btn-danger">Hapus</button>
                         </td>
