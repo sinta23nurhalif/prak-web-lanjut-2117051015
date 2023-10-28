@@ -48,13 +48,22 @@ class UserModel extends Model
         if($id != null){
 
             return $this->join('kelas', 'kelas.id=user.id_kelas')
-                ->select('user.id, user.nama, user.npm, kelas.nama_kelas, user.foto')
+                ->select('user.*, kelas.nama_kelas')
                 ->orderBy('user.id')
                 ->find($id);
         }
         return $this->join('kelas', 'kelas.id=user.id_kelas')
-            ->select('user.id, user.nama, user.npm, kelas.nama_kelas, user.foto')
+            ->select('user.*, kelas.nama_kelas')
             ->orderBy('user.id')
             ->findAll();
     }
+
+    public function updateUser($data, $id){
+        return $this->update($id, $data);
+    }
+
+    public function deleteUser($id){
+        return $this->delete($id);
+    }
+
 }

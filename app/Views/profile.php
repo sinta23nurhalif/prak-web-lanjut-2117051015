@@ -16,7 +16,7 @@
       <div class="container">
         <div class="w-100 d-grid border gap-2" style="height: 100vh: place-content: center:">
           <div class="w-50 text-center border m-auto">
-          <img src="<?= $user['foto'] ?? base_url('/assets/img/foto_def.png')?>" alt="foto" style="height: 250px; width: 250px; border-radius: 50%; object-fit: cover; object-position: 0 -8px;"  border="2px" ><br>
+          <img src="<?= $user['foto'] ?? base_url('/assets/uploads/img/')?>" alt="foto" style="height: 250px; width: 250px; border-radius: 50%; object-fit: cover; object-position: 0 -8px;"  border="2px" ><br>
           </div>
           <div class="nama"><?= $user['nama'] ?></div>
           <div class="npm"><?= $user['npm'] ?></div>
